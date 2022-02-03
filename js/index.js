@@ -11,17 +11,27 @@ function init(){
     clickBtn.addEventListener('click', clicking, false);
     resetBtn.addEventListener('click', reseting, false);
 
+    
+    span.textContent = `${clickNr} €`;
+    p.insertBefore(span, p.lastElementChild);
+
+    // FUNCIONALIDADES
+    function showWorker(){
+        if (clickNr => 20) {
+            
+        }
+    }
 
     function reseting(e){
         e.preventDefault();
         clickNr = 0;
-        span.textContent = clickNr;
+        span.textContent = `${clickNr} €`;
     }
 
     function clicking(e){
         e.preventDefault();
         clickNr += 1;
-        span.textContent = clickNr;
+        span.textContent = `${clickNr} €`;
         p.insertBefore(span, p.lastElementChild);
     }
 
